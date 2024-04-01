@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+$page-white: hsl(0, 0%, 98%);
+$page-gray: hsl(0, 0%, 41%);
+$page-black: hsl(0, 0%, 8%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Epilogue", sans-serif;
+  display: grid;
+  align-items: center;
+  place-items: center;
+}
+
+.page {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template:
+    "header header" 60px
+    "main aside" 1fr
+    "footer aside" 60px
+    / 1fr 1fr;
+
+  &__header {
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    color: $page-gray;
+
+    &-nav {
+      padding-right: 30%;
+      ul {
+        display: grid;
+        align-items: center;
+        place-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5%;
+        list-style: none;
+
+        li {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 5px;
+        }
+
+        li:hover {
+          cursor: pointer;
+          color: $page-black;
+        }
+      }
+    }
+    &-login {
+      margin-left: 100%;
+      margin-right: 0;
+      width: fit-content;
+      &:hover {
+        cursor: pointer;
+        color: $page-black;
+      }
+    }
+    &-register {
+      margin-left: 0;
+      width: fit-content;
+      border: 2px solid $page-gray;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 0;
+      &:hover {
+        cursor: pointer;
+        color: $page-black;
+      }
+    }
+  }
+
+  &__main {
+    grid-area: main;
+    padding: 10%;
+    &-title {
+      font-size: 60px;
+      font-weight: 700;
+      color: $page-black;
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+    &-text {
+      font-size: 18px;
+      font-weight: 500;
+      color: $page-gray;
+      padding-bottom: 10%;
+    }
+    &-button {
+      background-color: $page-black;
+      color: $page-white;
+      font-size: 18px;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 30px;
+
+      &:hover {
+        background-color: $page-white;
+
+        color: $page-black;
+        border: 2px solid $page-black;
+      }
+    }
+  }
+
+  &__aside {
+    grid-area: aside;
+
+    &-image {
+      padding-top: 5%;
+      padding-left: 5%;
+      padding-right: 20%;
+      width: 100%;
+    }
+  }
+
+  &__footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 5%;
+  }
+}

@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  place-content: center;
+  justify-items: center;
+  padding: 10%;
+  background-color: purple;
+}
+
+.card {
+  width: 450px;
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 30px 20px;
+  grid-template-areas: "icon title" "icon text";
+}
+.card__icon {
+  grid-area: icon;
+  width: 60px;
+  place-self: start;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 50%;
+}
+.card__icon i {
+  font-size: 40px;
+  padding: 10px;
+}
+.card__title {
+  grid-area: title;
+  font-size: 28px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  color: white;
+}
+.card__text {
+  grid-area: text;
+  color: whitesmoke;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.salary {
+  color: green;
+}
+.salary span.card__icon {
+  background-color: rgba(0, 128, 0, 0.2);
+}
+
+.pto {
+  color: purple;
+}
+.pto span.card__icon {
+  background-color: rgba(128, 0, 128, 0.2);
+}
+
+.work {
+  color: blue;
+}
+.work span.card__icon {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.stock {
+  color: gold;
+}
+.stock span.card__icon {
+  background-color: rgba(255, 215, 0, 0.2);
+}
+
+.hardware {
+  color: darkmagenta;
+}
+.hardware span.card__icon {
+  background-color: rgba(139, 0, 139, 0.2);
+}
+
+.growth {
+  color: lightblue;
+}
+.growth span.card__icon {
+  background-color: rgba(173, 216, 230, 0.2);
+}
+
+.retreats {
+  color: cyan;
+}
+.retreats span.card__icon {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+.medical {
+  color: lightcoral;
+}
+.medical span.card__icon {
+  background-color: rgba(240, 128, 128, 0.2);
+}/*# sourceMappingURL=index.css.map */

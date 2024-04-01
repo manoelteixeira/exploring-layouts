@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //   border: black 1px solid;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  place-content: center;
+  justify-items: center;
+  padding: 10%;
+  background-color: purple;
+}
+
+.card {
+  //   width: 40%;
+  width: 450px;
+  display: grid;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  border-radius: 20px;
+  column-gap: 10px;
+  padding: 30px 20px;
+  grid-template-areas:
+    "icon title"
+    "icon text";
+  // padding: 10%;
+
+  &__icon {
+    grid-area: icon;
+    width: 60px;
+    place-self: start;
+    background-color: rgba($color: #ffffff, $alpha: 0.2);
+    // color: greenyellow;
+    text-align: center;
+    border-radius: 50%;
+    i {
+      font-size: 40px;
+      padding: 10px;
+    }
+  }
+  &__title {
+    grid-area: title;
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: white;
+  }
+
+  &__text {
+    grid-area: text;
+    color: whitesmoke;
+    font-weight: 100;
+    font-size: 16px;
+  }
+}
+
+.salary {
+  color: green;
+  span.card__icon {
+    background-color: rgba($color: green, $alpha: 0.2);
+  }
+}
+
+.pto {
+  color: purple;
+  span.card__icon {
+    background-color: rgba($color: purple, $alpha: 0.2);
+  }
+}
+.work {
+  color: blue;
+  span.card__icon {
+    background-color: rgba($color: blue, $alpha: 0.2);
+  }
+}
+.stock {
+  color: gold;
+  span.card__icon {
+    background-color: rgba($color: gold, $alpha: 0.2);
+  }
+}
+.hardware {
+  color: darkmagenta;
+  span.card__icon {
+    background-color: rgba($color: darkmagenta, $alpha: 0.2);
+  }
+}
+.growth {
+  color: lightblue;
+  span.card__icon {
+    background-color: rgba($color: lightblue, $alpha: 0.2);
+  }
+}
+.retreats {
+  color: cyan;
+  span.card__icon {
+    background-color: rgba($color: cyan, $alpha: 0.2);
+  }
+}
+.medical {
+  color: lightcoral;
+  span.card__icon {
+    background-color: rgba($color: lightcoral, $alpha: 0.2);
+  }
+}
